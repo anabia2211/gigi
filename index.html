@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Giovanna 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="content">
+    <h1>Giovanna 💕</h1>
+    <p class="msg">Você é linda, perfeita... e eu estou com saudades 🥺</p>
+    
+    <div class="hearts">
+      <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="coração">
+      <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="coração">
+      <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="coração">
+    </div>
+
+    <p class="question">Você me perdoa?</p>
+    <div class="buttons">
+      <button class="yes" id="yes">Sim 💖</button>
+      <button class="no" id="no">Não 😢</button>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('no');
+    const yesBtn = document.getElementById('yes');
+    const content = document.getElementById('content');
+
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * window.innerWidth * 0.8;
+      const y = Math.random() * window.innerHeight * 0.8;
+      noBtn.style.position = 'absolute';
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+
+    yesBtn.addEventListener('click', () => {
+      content.innerHTML = `
+        <h1>💖 Obrigada, por me perdoar 💖</h1>
+        <img class="final-img" src="https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/515325029_1910270099811770_8389009625887425429_n.jpg?ccb=11-4&oh=01_Q5Aa2AEAZ4KmE3SQx2PRMOcrk6-KOrDhp1UBX0gkBwmvPNO2jg&oe=688F4B41&_nc_sid=5e03e0&_nc_cat=105" alt="Giovanna sorrindo">
+      `;
+    });
+  </script>
+</body>
+</html>
